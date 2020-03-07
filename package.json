@@ -1,0 +1,58 @@
+{
+    "name": "yamashiro",
+    "description": "🤖 Robust, multifunctional Discord bot made in the Eris library",
+    "version": "0.4.2",
+    "main": "dist/app.js",
+    "author": "August <augu@voided.pw>",
+    "license": "MIT",
+    "maintainers": [
+        {
+            "name": "August (Chris)",
+            "url": "https://augu.dev",
+            "role": "Lead Developer"
+        },
+        {
+            "name": "Imposed (Kyle)",
+            "role": "Developer"
+        }
+    ],
+    "scripts": {
+        "build:watch:npm": "npm run lint && rm -fr dist && tsc -w",
+        "build:watch": "yarn lint && rm -fr dist && tsc -w",
+        "build:npm": "npm run lint && rm -fr dist && tsc",
+        "move:data": "cp -r src/Data dist/Data",
+        "move:config": "cp src/config.yml dist/config.yml",
+        "build": "yarn lint && rm -fr dist && tsc",
+        "start": "node app.js",
+        "lint": "eslint src --ext .ts --fix",
+        "test": "yarn lint",
+        "dev": "nodemon app.js"
+    },
+    "dependencies": {
+        "@augu/immutable": "0.0.8",
+        "@augu/sysinfo": "0.0.3",
+        "@sentry/node": "5.7.1",
+        "@yamashiro/modules": "0.2.3",
+        "@yamashiro/utils": "0.0.1",
+        "common-tags": "1.8.0",
+        "eris": "0.11.0",
+        "fastify": "2.10.0",
+        "ioredis": "4.14.1",
+        "js-yaml": "3.13.1",
+        "mongoose": "5.7.8",
+        "prom-client": "11.5.3",
+        "table": "5.4.6",
+        "wumpfetch": "0.3.1"
+    },
+    "devDependencies": {
+        "@augu/eslint-config": "1.0.0",
+        "@types/common-tags": "1.8.0",
+        "@types/mongoose": "5.5.29",
+        "@types/node": "12.12.6",
+        "@typescript-eslint/eslint-plugin": "2.7.0",
+        "@typescript-eslint/parser": "2.7.0",
+        "eslint": "6.6.0",
+        "nodemon": "1.19.4",
+        "typescript": "3.7.2"
+    }
+}

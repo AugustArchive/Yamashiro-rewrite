@@ -1,0 +1,149 @@
+############################
+# Example of "config.yml" #
+# Use this as an example #
+#########################
+
+# The bot's environment
+# type: String
+# default: 'dev'
+# required: true
+environment: "dev"
+
+# The database URL to connect to MongoDB
+# required: true
+# type: String
+# default: 'mongodb://localhost:27017/Yamashiro'
+databaseUrl: "mongodb://localhost:27017/Yamashiro"
+
+# The webhook URL to send events to
+# type: String
+# required: false
+webhookUrl: ""
+
+# The sentry DSN to track errors
+# This is not required!
+#
+# type: String
+# required: false
+# default: ''
+sentryDSN: ""
+
+# The api key for the website
+# Required for HTTP requests
+# type: String
+# required: true
+apiKey: ""
+
+# The discord object. Used for the default prefix and token
+# type: Object
+# required: true
+discord:
+  # The default prefix
+  # type: String
+  # required: true
+  prefix: 's;'
+
+  # The bot's token. Used for connecting to Discord
+  # type: String
+  # required: true
+  token: ''
+
+# The redis object used for caching
+# type: Object
+# required: true
+redis:
+  # The host to authenicate with Redis
+  # type: String
+  # required: true
+  host: 'localhost'
+
+  # The port to authenicate with Redis
+  # type: String
+  # required: true
+  port: 6379
+
+# The api keys object
+# type: Object
+# required: true
+apis:
+  # The 'august' API key. Used for posting stats
+  # not obtainable at all
+  # type: String
+  # required: false
+  august: ''
+
+  # The 'builder' API key. used for upvoter commands
+  # Currently unobtainable
+  # type: String
+  # required: false
+  builder: ''
+
+  # The 'chewey' API key. Used for some commands
+  # Obtainable! (check the Configuration interface on how to get it)
+  # type: String
+  # required: false
+  chewey: ''
+
+  # The 'omdb' API key. Used for the 'movie' command :^)
+  # Obtainable! (forgot how lol)
+  # type: String
+  # required: false
+  omdb: ''
+
+  # The 'ppy' API key. Used for the 'osu' command
+  # Obtainable (locate at https://osu.ppy.sh/p/api)
+  # type: String
+  # required: false
+  ppy: ''
+
+  # The 'twitch' API key. Used for the Twitch feed and the Twitch command!
+  # Obtainable! (forgot how lol)
+  # type: String
+  # required: false
+  twitch: ''
+
+  # The 'igdb' API key. Used for the igdb command
+  # Obtainable (idk)
+  # type: String
+  # required: false
+  igdb: ''
+
+  # The 'wordnik' API key. Used for the hangman minigame
+  # Obtainable
+  # type: String
+  # required: false
+  wordnik: ''
+
+# The bot lists object. Used for posting to bot lists
+# NOTE: Make sure the bot's environment is `dev`
+# so you won't have to post to them
+botlists:
+  # The 'mythical' botlist key.
+  # type: String
+  # required: false
+  mythical: ''
+
+  # The 'luke' botlist key
+  # type: String
+  # required: false
+  luke: ''
+
+  # The 'oliy' botlist key
+  # type: String
+  # required: false
+  oliy: ''
+
+  # The 'unto' botlist key
+  # type: String
+  # required: false
+  unto: ''
+
+  # The 'bfd' botlist key
+  # type: String
+  # required: false
+  bfd: ''
+
+  # The 'dbb' botlist key
+  # type: String
+  # required: false
+  dbb: ''

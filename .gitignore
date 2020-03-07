@@ -1,0 +1,9 @@
+src/tmp/Evaluations/
+node_modules/
+src/tmp/Logs/
+src/config.yml
+dist/
+
+# Package Manager Stuff
+package-lock.json
+yarn.lock

@@ -1,0 +1,19 @@
+name: Ubuntu
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Update APT
+        run: sudo apt update
+      - name: Install Node.js from PPA
+        run: curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
+      - name: Install Node
+        run: sudo apt install -y nodejs
+      - name: Install packages
+        run: npm i
+      - name: Install global packages
+        run: sudo npm i -g eslint
+      - name: Lint
+        run: npm run lint

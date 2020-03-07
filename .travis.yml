@@ -1,0 +1,20 @@
+language: node_js
+sudo: required
+install: yarn
+node_js:
+  - "10"
+  - "11"
+  - "12"
+before_install:
+  - npm i
+  - npm i -g eslint yarn
+jobs:
+  include:
+    - stage: test
+      script: yarn lint
+cache:
+  yarn: true
+  directories:
+    - node_modules
+notifications:
+  email: false
